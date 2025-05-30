@@ -1,0 +1,27 @@
+
+prob3.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 e4 f0             	and    esp,0xfffffff0
+   6:	83 ec 20             	sub    esp,0x20
+   9:	e8 00 00 00 00       	call   e <_main+0xe>
+   e:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  15:	e8 00 00 00 00       	call   1a <_main+0x1a>
+  1a:	8d 44 24 1c          	lea    eax,[esp+0x1c]
+  1e:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  22:	c7 04 24 0f 00 00 00 	mov    DWORD PTR [esp],0xf
+  29:	e8 00 00 00 00       	call   2e <_main+0x2e>
+  2e:	8b 44 24 1c          	mov    eax,DWORD PTR [esp+0x1c]
+  32:	83 e0 01             	and    eax,0x1
+  35:	85 c0                	test   eax,eax
+  37:	75 0c                	jne    45 <_main+0x45>
+  39:	c7 04 24 12 00 00 00 	mov    DWORD PTR [esp],0x12
+  40:	e8 00 00 00 00       	call   45 <_main+0x45>
+  45:	b8 00 00 00 00       	mov    eax,0x0
+  4a:	c9                   	leave  
+  4b:	c3                   	ret    

@@ -1,0 +1,37 @@
+
+prob5.o:     file format pe-i386
+
+
+Disassembly of section .text:
+
+00000000 <_main>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	83 e4 f0             	and    esp,0xfffffff0
+   6:	83 ec 20             	sub    esp,0x20
+   9:	e8 00 00 00 00       	call   e <_main+0xe>
+   e:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  15:	e8 00 00 00 00       	call   1a <_main+0x1a>
+  1a:	8d 44 24 18          	lea    eax,[esp+0x18]
+  1e:	89 44 24 08          	mov    DWORD PTR [esp+0x8],eax
+  22:	8d 44 24 1c          	lea    eax,[esp+0x1c]
+  26:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  2a:	c7 04 24 15 00 00 00 	mov    DWORD PTR [esp],0x15
+  31:	e8 00 00 00 00       	call   36 <_main+0x36>
+  36:	8b 54 24 1c          	mov    edx,DWORD PTR [esp+0x1c]
+  3a:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  3e:	39 c2                	cmp    edx,eax
+  40:	7e 16                	jle    58 <_main+0x58>
+  42:	8b 44 24 1c          	mov    eax,DWORD PTR [esp+0x1c]
+  46:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  4a:	c7 04 24 1b 00 00 00 	mov    DWORD PTR [esp],0x1b
+  51:	e8 00 00 00 00       	call   56 <_main+0x56>
+  56:	eb 14                	jmp    6c <_main+0x6c>
+  58:	8b 44 24 18          	mov    eax,DWORD PTR [esp+0x18]
+  5c:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+  60:	c7 04 24 34 00 00 00 	mov    DWORD PTR [esp],0x34
+  67:	e8 00 00 00 00       	call   6c <_main+0x6c>
+  6c:	b8 00 00 00 00       	mov    eax,0x0
+  71:	c9                   	leave  
+  72:	c3                   	ret    
+  73:	90                   	nop
