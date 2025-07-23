@@ -1,39 +1,21 @@
-%option noyywrap
-
 %{
-    #include "cal.tab.h"
+#include "cal.tab.h"
 %}
 
-digit [0-9]
-num {digit}+
-float_num {digit}+"."{digit}+
-delim [ \t\r\n]
-letter [A-Za-z]
-under [_]
-
+%%
+"switch"         { return SWITCH; }
+"case"           { return CASE; }
+"default"        { return DEFAULT; }
+"break"          { return BREAK; }
+":"              { return COLON; }
+";"              { return SEMICOLON; }
+"="              { return ASSIGN; }
+[0-9]+           { yylval = atoi(yytext); return NUMBER; }
+[a-zA-Z_][a-zA-Z0-9_]* { return ID; }
+[ \t\n]+         { /* ignore whitespace */ }
+.                { return yytext[0]; }
 %%
 
-{delim} {/* skip whitespace */}
-
-"int"    { return INT_TYPE; }
-"float"  { return FLOAT_TYPE; }
-
-"if"     { return IF; }
-"else"   { return ELSE; }
-
-"("      { return LPAREN; }
-")"      { return RPAREN; }
-"{"      { return LBRACE; }
-"}"      { return RBRACE; }
-"="      { return ASSIGN; }
-"=="     { return EQ; }
-"%"      { return MOD; }
-";"      { return SEMI; }
-
-{float_num} { yylval = atof(yytext); return FLOAT_NUM; }
-{num}       { yylval = atoi(yytext); return INT_NUM; }
-
-({under}|{letter})({under}|{letter}|{digit})* { return ID; }
-
-
-%%
+int yywrap() {
+    return 1;
+}

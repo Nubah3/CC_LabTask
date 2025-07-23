@@ -46,15 +46,22 @@
      ASSIGN = 262,
      SEMI = 263,
      ID = 264,
-     COMMA = 265,
-     IF = 266,
-     ELSE = 267,
-     EQ = 268,
-     LPAREN = 269,
-     RPAREN = 270,
-     LBRACE = 271,
-     RBRACE = 272,
-     IFX = 273
+     IF = 265,
+     ELSE = 266,
+     FOR = 267,
+     WHILE = 268,
+     GT = 269,
+     LT = 270,
+     EQ = 271,
+     GE = 272,
+     LE = 273,
+     NE = 274,
+     COMMA = 275,
+     LBRACE = 276,
+     RBRACE = 277,
+     LPAREN = 278,
+     RPAREN = 279,
+     UMINUS = 280
    };
 #endif
 

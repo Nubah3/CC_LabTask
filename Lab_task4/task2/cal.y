@@ -21,15 +21,8 @@ dclr_stmt : Type ID SEMI | Type ID ASSIGN expr SEMI ;
 
 ass_stmt : ID ASSIGN expr SEMI ;
 
-expr : expr '+' expr
-     | expr '-' expr
-     | expr '*' expr
-     | expr '/' expr
-     | expr MOD expr
-     | expr EQ expr
-     | expr QUEST expr COLON expr
-     | NUM
-     | ID ;
+expr : expr '+' expr | expr '-' expr | expr '*' expr | expr '/' expr
+     | expr MOD expr | expr EQ expr | expr QUEST expr COLON expr | NUM | ID ;
 
 NUM : INT_NUM | FLOAT_NUM ;
 
