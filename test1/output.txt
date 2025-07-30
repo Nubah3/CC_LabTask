@@ -1,0 +1,3 @@
+Starting Prime Number Sum Parser...
+Parsing completed successfully!
+Your C prime number program syntax is correct.
